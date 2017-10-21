@@ -17,8 +17,8 @@
       <file leaf-file-name="bot_main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bot_main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3434">
-              <caret line="202" column="74" lean-forward="false" selection-start-line="202" selection-start-column="74" selection-end-line="202" selection-end-column="74" />
+            <state relative-caret-position="136">
+              <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
               <folding>
                 <element signature="e#15#25#0" expanded="true" />
               </folding>
@@ -251,7 +251,14 @@
       <option name="project" value="LOCAL" />
       <updated>1508581959758</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Another try with heroku">
+      <created>1508584402864</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1508584402864</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView">
@@ -296,7 +303,8 @@
     <MESSAGE value="Buildpacks are set, req is created" />
     <MESSAGE value="Procfile is added" />
     <MESSAGE value="Procfile format is changed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Procfile format is changed" />
+    <MESSAGE value="Another try with heroku" />
+    <option name="LAST_COMMIT_MESSAGE" value="Another try with heroku" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -730,8 +738,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bot_main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3434">
-          <caret line="202" column="74" lean-forward="false" selection-start-line="202" selection-start-column="74" selection-end-line="202" selection-end-column="74" />
+        <state relative-caret-position="136">
+          <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
           <folding>
             <element signature="e#15#25#0" expanded="true" />
           </folding>

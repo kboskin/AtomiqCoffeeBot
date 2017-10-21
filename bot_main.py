@@ -2,7 +2,10 @@
 import sys
 import constants
 import telebot
-reload(sys)
+import imp
+
+
+imp.reload(sys)
 sys.setdefaultencoding('utf-8')
 
 bot = telebot.TeleBot(constants.token)
