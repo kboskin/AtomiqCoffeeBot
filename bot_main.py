@@ -1,12 +1,13 @@
 # coding=utf-8
-import telebot
-import constants
 import sys
+import constants
+import telebot
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-bot = telebot.AsyncTeleBot(constants.token)
+bot = telebot.TeleBot(constants.token)
+
 print ("Bot is started")
 
 
@@ -22,7 +23,7 @@ def handle_command(message):
 def handle_command(message):
     user_markup = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True)
     user_markup.row(constants.command_make_order)
-    bot.send_message(message.from_user.id, "Привет!" + " " +  "Я готов слушать твой заказ, давай начнем!",
+    bot.send_message(message.from_user.id, "Привет!" + " " + "Я готов слушать твой заказ, давай начнем!",
                      reply_markup=user_markup)
 
 
@@ -114,6 +115,9 @@ def handle_text(message):
         bot.send_message(constants.nikita_chat_id,
                          "Заказ : " + constants.collectCategories[user_id] + "\nКто : " + user_name + "\nid : " + str(
                              message.from_user.id))
+        bot.send_message(constants.christina_chat_id,
+                         "Заказ : " + constants.collectCategories[user_id] + "\nКто : " + user_name + "\nid : " + str(
+                             message.from_user.id))
         constants.collectCategories[user_id] = ""
         del constants.collectCategories[user_id]
 
@@ -198,6 +202,21 @@ def handle_text(message):
     elif message.text.decode('utf-8') == constants.tea_black.decode('utf-8'):
         constants.collectCategories[user_id] += " " + message.text
         user_markup = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True)
+        user_markup.row(constants.tea_black_simple, constants.tea_black_with_bergamot)
+        bot.send_message(message.from_user.id, "С каким вкусом",
+                         reply_markup=user_markup)
+
+    elif message.text.decode('utf-8') == constants.tea_black_simple.decode('utf-8'):
+        constants.collectCategories[user_id] += " " + message.text
+        user_markup = telebot.types.ReplyKeyboardMarkup(resize_keyboard=Tr2ue, one_time_keyboard=True)
+        user_markup.row(constants.time_between_1_and_2, constants.time_between_2_and_3)
+        user_markup.row(constants.time_between_3_and_4, constants.time_now)
+        bot.send_message(message.from_user.id, "На какое время приготовить? На перемене между парами или сейчас?",
+                         reply_markup=user_markup)
+
+    elif message.text.decode('utf-8') == constants.tea_black_with_bergamot.decode('utf-8'):
+        constants.collectCategories[user_id] += " " + message.text
+        user_markup = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True)
         user_markup.row(constants.time_between_1_and_2, constants.time_between_2_and_3)
         user_markup.row(constants.time_between_3_and_4, constants.time_now)
         bot.send_message(message.from_user.id, "На какое время приготовить? На перемене между парами или сейчас?",
@@ -206,12 +225,72 @@ def handle_text(message):
     elif message.text.decode('utf-8') == constants.tea_green.decode('utf-8'):
         constants.collectCategories[user_id] += " " + message.text
         user_markup = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True)
+        user_markup.row(constants.tea_green_simple, constants.tea_green_jasmine)
+        user_markup.row(constants.tea_green_tropical_fruit, constants.tea_green_lotus)
+        bot.send_message(message.from_user.id, "С каким вкусом",
+                         reply_markup=user_markup)
+
+    elif message.text.decode('utf-8') == constants.tea_green_simple.decode('utf-8'):
+        constants.collectCategories[user_id] += " " + message.text
+        user_markup = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True)
+        user_markup.row(constants.time_between_1_and_2, constants.time_between_2_and_3)
+        user_markup.row(constants.time_between_3_and_4, constants.time_now)
+        bot.send_message(message.from_user.id, "На какое время приготовить? На перемене между парами или сейчас?",
+                         reply_markup=user_markup)
+
+    elif message.text.decode('utf-8') == constants.tea_green_jasmine.decode('utf-8'):
+        constants.collectCategories[user_id] += " " + message.text
+        user_markup = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True)
+        user_markup.row(constants.time_between_1_and_2, constants.time_between_2_and_3)
+        user_markup.row(constants.time_between_3_and_4, constants.time_now)
+        bot.send_message(message.from_user.id, "На какое время приготовить? На перемене между парами или сейчас?",
+                         reply_markup=user_markup)
+
+    elif message.text.decode('utf-8') == constants.tea_green_lotus.decode('utf-8'):
+        constants.collectCategories[user_id] += " " + message.text
+        user_markup = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True)
+        user_markup.row(constants.time_between_1_and_2, constants.time_between_2_and_3)
+        user_markup.row(constants.time_between_3_and_4, constants.time_now)
+        bot.send_message(message.from_user.id, "На какое время приготовить? На перемене между парами или сейчас?",
+                         reply_markup=user_markup)
+    elif message.text.decode('utf-8') == constants.tea_green_tropical_fruit.decode('utf-8'):
+        constants.collectCategories[user_id] += " " + message.text
+        user_markup = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True)
         user_markup.row(constants.time_between_1_and_2, constants.time_between_2_and_3)
         user_markup.row(constants.time_between_3_and_4, constants.time_now)
         bot.send_message(message.from_user.id, "На какое время приготовить? На перемене между парами или сейчас?",
                          reply_markup=user_markup)
 
     elif message.text.decode('utf-8') == constants.tea_fruit.decode('utf-8'):
+        constants.collectCategories[user_id] += " " + message.text
+        user_markup = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True)
+        user_markup.row(constants.tea_fruit_blueberry, constants.tea_fruit_cranberry)
+        user_markup.row(constants.tea_fruit_strawberry, constants.tea_fruit_grape)
+        bot.send_message(message.from_user.id, "С каким вкусом?",
+                         reply_markup=user_markup)
+
+    elif message.text.decode('utf-8') == constants.tea_fruit_strawberry.decode('utf-8'):
+        constants.collectCategories[user_id] += " " + message.text
+        user_markup = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True)
+        user_markup.row(constants.time_between_1_and_2, constants.time_between_2_and_3)
+        user_markup.row(constants.time_between_3_and_4, constants.time_now)
+        bot.send_message(message.from_user.id, "На какое время приготовить? На перемене между парами или сейчас?",
+                         reply_markup=user_markup)
+    elif message.text.decode('utf-8') == constants.tea_fruit_blueberry.decode('utf-8'):
+        constants.collectCategories[user_id] += " " + message.text
+        user_markup = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True)
+        user_markup.row(constants.time_between_1_and_2, constants.time_between_2_and_3)
+        user_markup.row(constants.time_between_3_and_4, constants.time_now)
+        bot.send_message(message.from_user.id, "На какое время приготовить? На перемене между парами или сейчас?",
+                         reply_markup=user_markup)
+    elif message.text.decode('utf-8') == constants.tea_fruit_cranberry.decode('utf-8'):
+        constants.collectCategories[user_id] += " " + message.text
+        user_markup = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True)
+        user_markup.row(constants.time_between_1_and_2, constants.time_between_2_and_3)
+        user_markup.row(constants.time_between_3_and_4, constants.time_now)
+        bot.send_message(message.from_user.id, "На какое время приготовить? На перемене между парами или сейчас?",
+                         reply_markup=user_markup)
+    elif message.text.decode('utf-8') == constants.tea_fruit_grape.decode('utf-8'):
         constants.collectCategories[user_id] += " " + message.text
         user_markup = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True)
         user_markup.row(constants.time_between_1_and_2, constants.time_between_2_and_3)
@@ -343,10 +422,11 @@ def handle_text(message):
         user_markup.row(constants.time_between_3_and_4, constants.time_now)
         bot.send_message(message.from_user.id, "На какое время приготовить? На перемене между парами или сейчас?",
                          reply_markup=user_markup)
-    else :
+    else:
         user_markup = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True)
         user_markup.row('/start')
-        bot.send_message(message.from_user.id, "Наши отношения стали очень сложными. Я тебя прощу, давай начнем все сначала",
+        bot.send_message(message.from_user.id,
+                         "Наши отношения стали очень сложными. Я тебя прощу, давай начнем все сначала",
                          reply_markup=user_markup)
 
 

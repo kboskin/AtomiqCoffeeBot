@@ -6,8 +6,9 @@ sys.setdefaultencoding('utf-8')
 
 collectCategories = {}
 
-token = ""
-nikita_chat_id =
+token = "401352162:AAE3YNb41I9vRSZw3nVLPZ2edQGPDh2lIIU"
+nikita_chat_id = 299971899
+christina_chat_id = 464276294
 
 command_make_order = "Сделать заказ"
 command_finish_order = "Завершить заказ"
@@ -31,8 +32,20 @@ with_milk = "С молоком"
 without_milk = "Без молока"
 
 tea_black = "Черный"
+tea_black_with_bergamot = "Бергамот"
+tea_black_simple = "Просто черный"
+
 tea_green = "Зеленый"
+tea_green_simple = "Просто зеленый"
+tea_green_jasmine = "Жасмин"
+tea_green_lotus = "Лотос"
+tea_green_tropical_fruit = ""
+
 tea_fruit = "Фруктовый"
+tea_fruit_strawberry = "Клубника"
+tea_fruit_cranberry = "Клюква"
+tea_fruit_blueberry = "Черника"
+tea_fruit_grape = "Виноград"
 
 drink_cola = "Cola"
 drink_water = "Bonaqua"
