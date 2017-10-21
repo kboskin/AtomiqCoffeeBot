@@ -1,7 +1,9 @@
 # coding=utf-8
 import sys
+import imp
 
-reload(sys)
+
+imp.reload(sys)
 sys.setdefaultencoding('utf-8')
 
 collectCategories = {}
