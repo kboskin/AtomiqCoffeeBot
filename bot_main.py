@@ -2,7 +2,6 @@
 import sys
 import constants
 import telebot
-
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
@@ -208,7 +207,7 @@ def handle_text(message):
 
     elif message.text.decode('utf-8') == constants.tea_black_simple.decode('utf-8'):
         constants.collectCategories[user_id] += " " + message.text
-        user_markup = telebot.types.ReplyKeyboardMarkup(resize_keyboard=Tr2ue, one_time_keyboard=True)
+        user_markup = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True)
         user_markup.row(constants.time_between_1_and_2, constants.time_between_2_and_3)
         user_markup.row(constants.time_between_3_and_4, constants.time_now)
         bot.send_message(message.from_user.id, "На какое время приготовить? На перемене между парами или сейчас?",
