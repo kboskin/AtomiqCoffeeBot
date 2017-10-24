@@ -1,2 +1,2 @@
-web: python bot_main.py
-web: gunicorn Python.wsgi
+[requires]
+python_version = "2.7"
