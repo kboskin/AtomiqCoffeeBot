@@ -1,1 +1,1 @@
-web: python bot_main.py
+web: gunicorn bot_main.wsgi
