@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b0e2daca-f1be-48c6-872b-3e691263c88e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pipfile" afterPath="$PROJECT_DIR$/Pipfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pipfile.lock" afterPath="$PROJECT_DIR$/Pipfile.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Procfile" afterPath="$PROJECT_DIR$/Procfile" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -62,7 +60,7 @@
         <entry file="file://$PROJECT_DIR$/Procfile">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="22" lean-forward="false" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
+              <caret line="0" column="20" lean-forward="false" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -365,7 +363,14 @@
       <option name="project" value="LOCAL" />
       <updated>1508838266093</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="And again some another try with heroku, it's 15 i think">
+      <created>1508838479186</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1508838479186</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TodoView">
@@ -420,7 +425,8 @@
     <MESSAGE value="And again some another try with heroku, it's 12 i think" />
     <MESSAGE value="And again some another try with heroku, it's 13 i think" />
     <MESSAGE value="And again some another try with heroku, it's 14 i think" />
-    <option name="LAST_COMMIT_MESSAGE" value="And again some another try with heroku, it's 14 i think" />
+    <MESSAGE value="And again some another try with heroku, it's 15 i think" />
+    <option name="LAST_COMMIT_MESSAGE" value="And again some another try with heroku, it's 15 i think" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -855,7 +861,7 @@
     <entry file="file://$PROJECT_DIR$/Procfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="22" lean-forward="false" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
+          <caret line="0" column="20" lean-forward="false" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
           <folding />
         </state>
       </provider>
